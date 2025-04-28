@@ -9,7 +9,7 @@ if ! command -v g++ >/dev/null 2>&1; then
   apt-get install -y --no-install-recommends g++
 fi
 DIR="$(dirname "$0")"
-SRC="$DIR/collect_files_step1.cpp"
+SRC="$DIR/collect_files.cpp"
 BIN="$DIR/cf"
 g++ -std=c++17 -O2 "$SRC" -o "$BIN"
 "$BIN" "$@"
